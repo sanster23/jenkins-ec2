@@ -1,1 +1,1 @@
-# jenkins-ec2
+## CI/CD using Jenkins sample app
