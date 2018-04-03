@@ -24,11 +24,11 @@ node {
     // }
 
 
-    stage('Test kubectl'){
+    stage('Test kubectl') {
         
         echo "running kubectl test"
 
-        sh "kubectl --kube-config=./kube-conf get nodes"
+        sh "kubectl --kubeconfig=./kube-conf get nodes"
     }
 
     // stage('Push image') {
