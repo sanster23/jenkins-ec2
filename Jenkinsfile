@@ -34,8 +34,11 @@ node {
     stage('Test helm') {
 
         echo "running helm init"
-        sh "export KUBECONFIG=./.kube/"
-        sh "helm init"
+        sh "helm home"
+        sh "helm search"
+        sh "helm list"
+        sh "export KUBECONFIG=./.kube/config"
+        sh "helm install --name my-release stable/jenkins"
     
     }
 
