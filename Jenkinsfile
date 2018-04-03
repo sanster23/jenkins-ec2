@@ -28,7 +28,15 @@ node {
         
         echo "running kubectl test"
 
-        sh "kubectl --kubeconfig=./kube-conf get nodes"
+        sh "kubectl --kubeconfig=./.kube/config get nodes"
+    }
+
+    stage('Test helm') {
+
+        echo "running helm init"
+        sh "export KUBECONFIG=./.kube/"
+        sh "helm init"
+    
     }
 
     // stage('Push image') {
